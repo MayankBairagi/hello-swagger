@@ -41,7 +41,7 @@ trait DBService {
 
 case class Book(id: String, name: String, author: String)
 
-class LibraryService extends DBService {
+class BookService extends DBService {
   def save(book: Book):Boolean = {
     val process: Connection => Some[Boolean] = {
       connection =>
